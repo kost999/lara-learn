@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    {{ $any or 'Nothing passed here' }}
+                    Laravel
                 </div>
 
                 <div class="links">

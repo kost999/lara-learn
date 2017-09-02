@@ -11,8 +11,10 @@
 |
 */
 
-Route::get('/{any?}', function ($any = null) {
-    return view('welcome', compact('any'));
+Route::get('/', function () {
+    return view('welcome');
 });
 
-
+Route::get('/about', function () {
+    return view('about');
+});
