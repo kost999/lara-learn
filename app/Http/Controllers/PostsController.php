@@ -8,12 +8,14 @@ class PostsController extends Controller
 {
     public function index()
 	{
-		return view('posts.index');
+		$posts = Post::latest()->get();
+
+		return view('posts.index', compact('posts'));
 	}
 
-	public function show()
+	public function show(Post $post)
 	{
-		return view('posts.show');
+		return view('posts.show', compact('post'));
 	}
 
 	public function create()
@@ -24,15 +26,17 @@ class PostsController extends Controller
 	public function store()
 	{
 		// Create a new post
-
 //		$post = new Post();
-
 //		$post->title = request('title');
 //		$post->body = request('body');
 
 		// Save it to the database
-
 //		$post->save();
+
+		$this->validate(request(), [
+			'title' => 'required',
+			'body' => 'required',
+		]);
 
 		Post::create([
 			'title' => request('title'),
@@ -40,7 +44,6 @@ class PostsController extends Controller
 		]);
 
 		// And then redirect to the homepage
-
 		return redirect('/posts');
 	}
 }
