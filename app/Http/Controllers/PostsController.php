@@ -37,6 +37,18 @@ class PostsController extends Controller
 
 	public function store()
 	{
+
+
+
+
+		return [
+			'abc' => 123,
+		];
+
+
+
+
+
 		// Create a new post
 //		$post = new Post();
 //		$post->title = request('title');
@@ -49,6 +61,8 @@ class PostsController extends Controller
 			'title' => 'required',
 			'body' => 'required',
 		]);
+
+
 
 
 		auth()->user()->publish(
