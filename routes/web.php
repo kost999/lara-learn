@@ -44,3 +44,11 @@ Route::get('/logout', 'SessionsController@destroy');
 Route::get('/mailable', function () {
 	return new \App\Mail\WelcomeAgain();
 });
+
+##########################################
+################ FRONTEND ################
+##########################################
+
+Route::get('mix', function () {
+	return view('mix.welcome');
+});

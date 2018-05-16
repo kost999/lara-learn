@@ -14,6 +14,8 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/blog.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 
 <body>
