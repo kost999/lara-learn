@@ -1,9 +1,1 @@
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Foobar = function Foobar() {
-  _classCallCheck(this, Foobar);
-};
-
-alert('one');
-
-alert('two');
+function _classCallCheck(a,n){if(!(a instanceof n))throw new TypeError("Cannot call a class as a function")}var Foobar=function a(){_classCallCheck(this,a)};alert("one"),alert("two");
